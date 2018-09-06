@@ -1,0 +1,19 @@
+links.txt
+Created Thu Jun 29 21:38:44 AKDT 2017
+Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+gitinfo2 related links
+
+
+Links
+=====
+Directory macros/latex/contrib/gitinfo2
+https://www.ctan.org/tex-archive/macros/latex/contrib/gitinfo2?lang=en
+
+gitinfo2: LaTeX and git join forces
+BY BRENT.LONGBOROUGH POSTED ON MAY 14, 2014
+http://tex-talk.net/2014/05/gitinfo2-latex-and-git-join-forces/
+
+How can a Git tag be aligned with the formatted PDF using gitinfo2?
+https://tex.stackexchange.com/questions/289290/how-can-a-git-tag-be-aligned-with-the-formatted-pdf-using-gitinfo2
