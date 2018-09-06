@@ -1,0 +1,76 @@
+README
+Created Thu Jun 29 21:37:20 AKDT 2017
+Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Updated forex.tex with
+
+Build gets error:
+malachite:~/git/tex/forex$ make
+...
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg)))
+
+! Package gitinfo2 Error: I can't find the file '.git/gitHeadInfo.gin'
+(gitinfo2)                Please check the manual (gitinfo2.pdf) 
+(gitinfo2)                if you need more details.
+
+See the gitinfo2 package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.138 }
+       
+? quit
+OK, entering \batchmodeMakefile:118: recipe for target 'forex.dvi' failed
+make: *** [forex.dvi] Error 1
+malachite:~/git/tex/forex$
+
+
+Googling:
+longborough commented on Nov 10, 2014
+That explains it. You have the old hooks, from gitinfo version 1.
+You need to replace them with the sample from gitinfo2, as explained on page 3 of the manual.
+
+Thank you for this issue, as although it was a problem your end, it did also show up a
+well-hidden bug.
+  longborough closed this on Nov 10, 2014
+
+--where should gitHeadInfo.gin be? #10
+  Closed	maxheld83 opened this issue on Nov 3, 2014 o 6 comments
+  https://github.com/Hightor/gitinfo2/issues/10
+
+
+Filelist
+========
+gitinfo2.pdf
+  gitinfo2.sty
+  A package for accessing metadata
+  from the git dvcs
+  Brent Longborough
+  November 2015
+  Release: 2.0.7 (10541bd)
+  Downloaded: June 29, 2017
+  http://mirrors.rit.edu/CTAN/macros/latex/contrib/gitinfo2/gitinfo2.pdf
+
+gitinfo2.txt
+  gitinfo2
+  The `gitinfo2' package allows version control metadata to be
+  incorporated into LaTeX documents; the metadata is obtained from the
+  git distributed version control system.
+  --Directory macros/latex/contrib/gitinfo2
+    https://www.ctan.org/tex-archive/macros/latex/contrib/gitinfo2?lang=en
+
+links.txt
+  gitinfo2 related links
+
+post-xxx-sample.txt
+  Copyright 2015 Brent Longborough
+  Directory macros/latex/contrib/gitinfo2
+  CTAN
+  Comprehensive TEX Archive Network
+  To install for git revision info:
+  $ cp post-xxx-sample.txt .git/hooks/post-checkout
+  $ chmod g+x .git/hooks/post-checkout
+  https://www.ctan.org/tex-archive/macros/latex/contrib/gitinfo2?lang=en
+  http://mirror.hmc.edu/ctan/macros/latex/contrib/gitinfo2/post-xxx-sample.txt
+
